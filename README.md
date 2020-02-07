@@ -61,4 +61,27 @@ const sayHi = (person: Human): string => {
     person.gender
   }!`;
 };
+
+Typescript에서의 Class
+class Human {
+  public name: string;
+  private age: number;
+  public gender: string;
+  constructor(name: string, age: number, gender: string) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+  }
+}
+
+const john = new Human("john", 20, "male");
+
+const sayHi = (person: Human): string => {
+  return `Hello ${person.name}, you are ${person.age}, you are a ${
+    person.gender
+  }!`;
+};
+
+private 속성인 person.age에 접근하기 때문에 컴파일 되지 않는다.
 ```
+
