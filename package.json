@@ -1,0 +1,12 @@
+{
+  "name": "typescript_study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/euijunh/typescript_study.git",
+  "author": "euijunh <lalaph@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "tsc"
+  }
+}
