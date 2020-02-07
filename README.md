@@ -16,3 +16,26 @@ tsconfig.json -> ts가 어떻게 js로 변환할지 옵션설정
 tsc 명령어 -> ts파일에 있는 코드를 컴파일해서 index.js, index,js.map 파일을 생성
 
 node.js는 ts를 이해하지 못하기 때문에 JS로 컴파일 해주어야 한다.
+
+Typescript는 Typed 언어 어떤 종류의 변수와 데이터인지 설정을 할 수 있다.
+
+그래서 코드를 읽을 때 어떤동작이 일어날지 예상이 가능하다.
+```javascript
+const sayHi = (name, age, gender) => {
+  console.log(`Hello ${name}, you are ${age}, you are a ${gender}`);
+};
+
+sayHi("s", 10);
+매개변수가 3개가 아닌 2개가 들어와서 에러
+
+const sayHi = (name: string, age: number, gender: string): string => {
+  return `Hello ${name}, you are ${age}, you are a ${gender}!`;
+};
+
+어떠 타입의 인수를 넣을지 지정
+name: string, age: number, gender: string
+return 의 타입은 string
+
+```
+
+tsc-watch -> 파일수정시마다 작업실행
