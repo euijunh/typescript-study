@@ -39,3 +39,26 @@ return 의 타입은 string
 ```
 
 tsc-watch -> 파일수정시마다 작업실행
+
+객체 전달하기
+
+interface 명령어로 새로운 타입을 만들어 사용
+```javascript
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
+
+const person = {
+  name: "nicolas",
+  age: 22,
+  gender: "male"
+};
+
+const sayHi = (person: Human): string => {
+  return `Hello ${person.name}, you are ${person.age}, you are a ${
+    person.gender
+  }!`;
+};
+```
