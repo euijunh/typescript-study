@@ -83,5 +83,23 @@ const sayHi = (person: Human): string => {
 };
 
 private 속성인 person.age에 접근하기 때문에 컴파일 되지 않는다.
-```
+
+
+Blockchain Creating
+
+블록체인이란 : 블록의 연결이다.
+
+array of blocks 그리고 genesisBlock
+let blockchain: [Block] = [genesisBlock];
+
+이렇게 작성하면 타입스크립트는 블록만 블록체인에 추가하도록 체크할 것이다.
+
+새로운 블록을 만들기 위해서는 해쉬를 계산해야한다.
+해쉬는 모든 속성을 엄청 길고 수학적으로 이상한 하나의 문자열로 결합한다.
+
+블록의 해쉬를 계산할 수 있어야 한다.
+
+calculateHash - static method : 메서드가 블록 클래스 안에 있고
+클래스를 생성되지 않아도 호출할 수 있는 메서드라는 의미이다.
+
 
